@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+<section class="container py-5">
+  <h1 class="mb-4"><i class="fa-solid fa-envelope me-2 text-primary"></i><%= title %></h1>
+  <div class="row g-5">
+    <div class="col-md-5">
+      <p class="lead">Want to work together or just say hi? Reach me here.</p>
+      <ul class="list-unstyled">
+        <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-primary"></i>you@example.com</li>
+        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>Oshawa, ON</li>
+        <li class="mb-2"><i class="fa-brands fa-linkedin me-2 text-primary"></i><a href="https://linkedin.com/in/s3yi.ade">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-7">
+      <%# "sent" is true only after the POST /contact route runs %>
+      <% if (sent) { %>
+        <div class="alert alert-success"><i class="fa-solid fa-circle-check me-2"></i>Thanks, <%= name %>! Your message was received.</div>
+      <% } %>
+
+      <form action="/contact" method="POST" class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="col-sm-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            <div class="invalid-feedback">Please enter a message.</div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
