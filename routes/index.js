@@ -4,36 +4,36 @@ var router = express.Router();
 
 const projects = [
   {
-    title: "First Project",
-    description: "",
-    tech: [],
-    image: "",
-    github: "",
-    live: ""
+    title: "HESTIA",
+    description: "Hestia- hestia is a property management software platform for canadian landlords",
+    tech: ['TS', 'SUPA', 'NEXT.JS', 'VERCEL'],
+    image: "/images/project1.png",
+    github: "https://github.com/s3yiade/",
+    live: "https://hestiapm.ca"
   },
   {
-    title: "Second Project",
-    description: "",
-    tech: [],
-    image: "",
-    github: "",
-    live: ""
+    title: "SOXO",
+    description: "Soxo- soxo is a community building platform built for students",
+    tech: ['TS', 'SUPA', 'NEXT.JS', 'VERCEL', 'AWS'],
+    image: "/images/project2.png",
+    github: "https://github.com/adinv/soxo",
+    live: "https://soxo.online"
   },
   {
-    title: "Third Project",
-    description: "",
-    tech: [],
-    image: "",
-    github: "",
-    live: ""
+    title: "FoodFairy",
+    description: "FoodFairy - foodfairy is a webapp i built for a client",
+    tech: ['NODE.JS', 'HTML', 'AWS', 'VPS', 'LINUX'],
+    image: "/images/project3.png",
+    github: "https://github.com/adainv/foodfairy",
+    live: "https://foodfairy.ca"
   },
   {
-    title: "Fourth Project",
-    description: "",
-    tech: [],
-    image: "",
-    github: "",
-    live: ""
+    title: "AEGIS",
+    description: "AEGIS - aegis is an automated security scanner that checks your domains and website for vulns",
+    tech: ['TS', 'NODE.JS', 'VERCEL'],
+    image: "images/project4.png",
+    github: "https://github.com/adainv/scanner",
+    live: "https://viverna.ca/scan"
   }
 ];
 
